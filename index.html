@@ -16,6 +16,8 @@
     <canvas></canvas>
     <script>
         const canvasE1 = document.querySelector("canvas") , canvasCtx = canvasE1.getContext ('2d')
+        
+        const mouse = {x:0, y:0}
 
         gapx = 10
         const lineWidth = 15
@@ -48,6 +50,9 @@
             y: 100,
             w: line.w,
             h:200,
+            _move : function(){
+                this.y = mouse.y - this.h /2
+            },
             draw: function(){
                 canvasCtx.fillStyle = "#ffffff"
                 canvasCtx.fillRect(
@@ -56,6 +61,8 @@
                 this.w,
                 this.h
                 )
+
+                this._move()
             }
         }
 
@@ -142,6 +149,11 @@
 
         setup()
         main()
+
+        canvasE1.addEventListener('mousemove', function(e){
+            mouse.x = e.pageX
+            mouse.y = e.pageY
+        })
     </script>
 </body>
 </html>
