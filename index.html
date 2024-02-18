@@ -126,6 +126,18 @@
                }
              }
 
+             if (this.x < this.r + leftPaddle.w + gapx){
+
+                if (this.y + this.r > leftPaddle.y && 
+                this.y - this.r < leftPaddle.y + leftPaddle.h)
+                {
+                    this._reverseX()
+                } else {
+                    score.increaseComputer()
+                    this._pointUp()
+                }
+             }
+
                 if(
                 (this.y  - this.r < 0 && this.directionY < 0 ) ||
                 (this.y > field.h - this.r && this.directionY > 0))
@@ -133,6 +145,8 @@
                     this._reverseY()
                 }
             },
+
+
             _reverseY: function(){
                 this.directionY = this.directionY* -1
             },
