@@ -153,7 +153,11 @@
             _reverseX: function(){
                 this.directionX = this.directionX* -1
             },
+            _speedUp: function(){
+              this.speed +=3  
+            },
             _pointUp:function(){
+                this._speedUp()
                 this.x = field.w/2
                 this.y = field.h/2
             },
