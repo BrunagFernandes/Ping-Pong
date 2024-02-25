@@ -8,6 +8,8 @@ Bem-vindo ao Ping Pong Game! Este é um jogo simples de ping pong implementado e
 2. Use o mouse para controlar a raquete da esquerda.
 3. Jogue contra o computador!
 
+   Você pode jogar aqui: https://brunagfernandes.github.io/Ping-Pong/
+
 ## Estrutura do Projeto
 
 - **index.html**: Arquivo principal que contém a estrutura do jogo e a lógica básica.
